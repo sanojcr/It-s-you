@@ -15,20 +15,8 @@ export const appConfig: ApplicationConfig = {
   providers: [
     importProvidersFrom(
       HttpClientModule,
-      TranslateService,
-      TranslatePipe
+      TranslateService
     ),
-    TranslatePipe,
-    // importProvidersFrom(
-    //   HttpClientModule,
-    //   TranslateModule.forRoot({
-    //     loader: {
-    //       provide: TranslateLoader,
-    //       useFactory: HttpLoaderFactory,
-    //       deps: [HttpClient]
-    //     }
-    //   })
-    // ),
     provideRouter(routes),
     
   ]
