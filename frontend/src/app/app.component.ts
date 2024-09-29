@@ -1,8 +1,9 @@
-import { Component, importProvidersFrom, OnInit } from '@angular/core';
+import { Component, importProvidersFrom, Inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { environment } from '../environments/environment';
 import { TranslateService } from './services/translate.service';
 import { PipeModule } from './pipe/pipe.module';
+import { APP_CONSTANTS, AppConstants } from './app.constants';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,12 @@ export class AppComponent implements OnInit {
     console.log(environment.name);
   }
 
-  constructor(private translationService: TranslateService) { }
+  constructor(
+    private translationService: TranslateService,
+    @Inject(APP_CONSTANTS) private constants: AppConstants
+  ) { 
+    console.log(constants.appName);
+  }
 
   setLanguage(lang: string): void {
     this.translationService.setLanguage(lang);
