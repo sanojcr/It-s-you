@@ -10,6 +10,9 @@ import { initFlowbite } from 'flowbite';
 })
 export class MainNavComponent implements OnInit {
 
+  isDarkMode = false;
+  selectedLanguage = 'en';
+
   constructor(
     private translationService: TranslateService,
     @Inject(APP_CONSTANTS) private constants: AppConstants
@@ -26,6 +29,17 @@ export class MainNavComponent implements OnInit {
   }
 
   setLanguage(lang: string): void {
+    this.selectedLanguage = lang;
     this.translationService.setLanguage(lang);
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+
+    if (this.isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
   }
 }
