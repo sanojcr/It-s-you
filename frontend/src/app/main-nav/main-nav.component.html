@@ -57,8 +57,8 @@
       <ul class="space-y-2 font-medium">
          <li class="its-you nav-menu mt-30">
             <label class="nav-item inline-flex items-center cursor-pointer">
-               <input type="checkbox" class="sr-only" [(ngModel)]="isDarkMode">
-               <div (click)="toggleDarkMode()" class="w-10 h-6 bg-gray-200 rounded-full p-1 duration-300 ease-in-out"
+               <input (input)="toggleDarkMode()" type="checkbox" class="sr-only" [(ngModel)]="isDarkMode">
+               <div class="w-10 h-6 bg-gray-200 rounded-full p-1 duration-300 ease-in-out"
                   [class.bg-green-500]="isDarkMode">
                   <div class="bg-white w-4 h-4 rounded-full shadow-md transform duration-300 ease-in-out"
                      [class.translate-x-4]="isToggled"></div>
