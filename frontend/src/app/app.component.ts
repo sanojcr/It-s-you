@@ -1,16 +1,25 @@
-import { Component, importProvidersFrom, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, Inject, OnInit } from '@angular/core';
 import { environment } from '../environments/environment';
 import { TranslateService } from './services/translate.service';
-import { PipeModule } from './pipe/pipe.module';
+import { APP_CONSTANTS, AppConstants } from './app.constants';
+import { initFlowbite } from 'flowbite';
+import {
+  initAccordions,
+  initCarousels,
+  initCollapses,
+  initDials,
+  initDismisses,
+  initDrawers,
+  initDropdowns,
+  initModals,
+  initPopovers,
+  initTabs,
+  initTooltips,
+  
+} from 'flowbite';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterOutlet,
-    PipeModule
-  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -19,13 +28,20 @@ export class AppComponent implements OnInit {
   title = 'frontend';
 
   ngOnInit(): void {
-    console.log(environment.name);
+    initFlowbite();
   }
 
-  constructor(private translationService: TranslateService) { }
-
-  setLanguage(lang: string): void {
-    this.translationService.setLanguage(lang);
+  ngAfterViewInit(): void {
+    initFlowbite();
   }
+
+  constructor(
+    private translationService: TranslateService,
+    @Inject(APP_CONSTANTS) private constants: AppConstants
+  ) {
+    console.log(constants.appName);
+  }
+
+
 
 }
