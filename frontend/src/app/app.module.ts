@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppConstants } from './app.constants';
 import { AppRoutingModule, routes } from './app.routes';
 import { PipeModule } from './pipe/pipe.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,8 @@ import { PipeModule } from './pipe/pipe.module';
   imports: [
     BrowserModule,
     CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     AppRoutingModule,
     PipeModule 
