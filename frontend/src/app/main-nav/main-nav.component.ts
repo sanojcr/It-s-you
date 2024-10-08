@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { APP_CONSTANTS, AppConstants } from '../app.constants';
 import { TranslateService } from '../services/translate.service';
 import { initFlowbite } from 'flowbite';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-main-nav',
@@ -15,7 +16,8 @@ export class MainNavComponent implements OnInit {
 
   constructor(
     private translationService: TranslateService,
-    @Inject(APP_CONSTANTS) private constants: AppConstants
+    @Inject(APP_CONSTANTS) private constants: AppConstants,
+    private router: Router
   ) {
     console.log(constants.appName);
   }
@@ -41,5 +43,15 @@ export class MainNavComponent implements OnInit {
     } else {
       document.documentElement.classList.remove('dark');
     }
+  }
+
+  navigateToRoute(route: string): void {
+    this.router.navigate([route]).then(() => {
+      const backdrop = document.querySelector('[drawer-backdrop]') as HTMLDivElement;
+      backdrop.click();
+      console.log(`navigated to ${route}`);
+    }).catch((err) => {
+      console.error(`error navigating to ${route}:`, err);
+    });
   }
 }

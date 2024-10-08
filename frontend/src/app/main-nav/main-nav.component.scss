@@ -9,7 +9,6 @@
 }
 
 .its-you.side-bar {
-    overflow-y: hidden;
     overflow-x: hidden;
 }
 
@@ -25,4 +24,8 @@
     .sm\:ml-64 {
         margin-left: 4.5rem;
     }
+}
+
+.its-you.pb-3rem{
+    padding-bottom: 3rem;
 }
