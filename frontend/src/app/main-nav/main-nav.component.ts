@@ -54,4 +54,8 @@ export class MainNavComponent implements OnInit {
       console.error(`error navigating to ${route}:`, err);
     });
   }
+
+  isActive(route: string): boolean {
+    return this.router.url === `/${route}`;
+  }
 }
