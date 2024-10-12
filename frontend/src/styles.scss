@@ -3,10 +3,14 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+   
+}
 
 .active-nav {
     background-color: #f3f4f6;
     color: #1f2937;
+
     svg {
         color: #1f2937;
     }
@@ -15,6 +19,7 @@
 .dark .active-nav {
     background-color: #374151 !important;
     color: #ffffff !important;
+
     svg {
         color: #ffffff;
     }
