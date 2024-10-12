@@ -3,10 +3,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
-   
-}
-
 .active-nav {
     background-color: #f3f4f6;
     color: #1f2937;
@@ -22,5 +18,33 @@ body {
 
     svg {
         color: #ffffff;
+    }
+}
+
+.its-you.logo {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 1rem;
+    color: #1f2937;
+
+    span {
+        padding: 5px;
+        border: 4px solid #1f2937;
+    }
+}
+
+.dark .its-you.logo {
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding-bottom: 1rem;
+    color: #e5e7eb !important;
+
+    span {
+        padding: 5px;
+        border: 4px solid #e5e7eb !important;
     }
 }
