@@ -40,7 +40,8 @@
             </a>
          </li>
          <li class="its-you nav-menu">
-            <a href="javascript:void(0)" [ngClass]="{'active-nav ': isActive('passion')}" (click)="navigateToRoute('passion')"
+            <a href="javascript:void(0)" [ngClass]="{'active-nav ': isActive('passion')}"
+               (click)="navigateToRoute('passion')"
                class="nav-item flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                <svg
                   class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -86,6 +87,13 @@
 </aside>
 
 <div class="p-4 sm:ml-64">
+   
+   <div class="absolute top-0 left-1/2 transform -translate-x-1/2 p-4 sm:p-0 sm:static sm:transform-none sm:translate-x-0">
+      <div class="its-you logo ">
+         <span>S</span>
+      </div>
+    </div>
+
    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
       <router-outlet></router-outlet>
    </div>
