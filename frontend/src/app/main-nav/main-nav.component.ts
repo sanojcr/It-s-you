@@ -13,6 +13,7 @@ export class MainNavComponent implements OnInit {
 
   isDarkMode = false;
   selectedLanguage = 'en';
+  isMbDrawerOpen = false;
 
   constructor(
     private translationService: TranslateService,
