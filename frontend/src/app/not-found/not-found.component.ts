@@ -35,8 +35,6 @@ export class NotFoundComponent implements OnInit {
   }
 
   redirectToHome(){
-    this.theme.isDarkMode = false;
-    this.setDarkMode(this.theme.isDarkMode);
     this.route.navigate(['/']);
   }
 

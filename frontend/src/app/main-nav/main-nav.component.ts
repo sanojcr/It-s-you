@@ -25,6 +25,8 @@ export class MainNavComponent implements OnInit {
 
   ngOnInit(): void {
     initFlowbite();
+    this.isDarkMode = true;
+    this.toggleDarkMode();
   }
 
   ngAfterViewInit(): void {
