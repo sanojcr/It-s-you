@@ -6,8 +6,8 @@
 <header class="z-50 hidden sm:block">
     <nav class="flex justify-center p-6 px-8" aria-label="Global">
         <div class="flex gap-x-12 grid grid-cols-2 text-center sm:grid-cols-8">
-            <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Me</a>
-            <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-me')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Me</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-about')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About</a>
             <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Work</a>
             <a href="javascript:void(0)"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">History</a>
@@ -35,9 +35,9 @@
             class="z-10 dark:text-white dark:bg-gray-700 origin-top-right absolute left-1/2 transform -translate-x-1/2 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none  group-hover:block">
             <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">Me</a>
+                    role="menuitem" (click)="scrollToSection('app-me')">Me</a>
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">About</a> 
+                    role="menuitem" (click)="scrollToSection('app-about')">About</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">Work</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
@@ -56,5 +56,6 @@
 </div>
 
 <div>
-    <app-me></app-me>
+    <app-me #mec></app-me>
+    <app-about #aboutc></app-about>
 </div>
