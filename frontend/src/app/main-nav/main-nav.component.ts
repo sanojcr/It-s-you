@@ -3,6 +3,7 @@ import { APP_CONSTANTS, AppConstants } from '../app.constants';
 import { TranslateService } from '../services/translate.service';
 import { initFlowbite } from 'flowbite';
 import { Router } from '@angular/router';
+import { ThemeService } from '../services/theme.service';
 
 @Component({
   selector: 'app-main-nav',
@@ -11,13 +12,13 @@ import { Router } from '@angular/router';
 })
 export class MainNavComponent implements OnInit {
 
-  isDarkMode = false;
   selectedLanguage = 'en';
 
   constructor(
     private translationService: TranslateService,
     @Inject(APP_CONSTANTS) private constants: AppConstants,
-    private router: Router
+    private router: Router,
+    private theme: ThemeService
   ) {
     console.log(constants.appName);
   }
@@ -58,4 +59,13 @@ export class MainNavComponent implements OnInit {
   isActive(route: string): boolean {
     return this.router.url === `/${route}`;
   }
+
+  get isDarkMode(): boolean {
+    return this.theme.isDarkMode;
+  };
+
+  set isDarkMode(value: boolean) {
+    this.theme.isDarkMode = value;
+  };
+  
 }

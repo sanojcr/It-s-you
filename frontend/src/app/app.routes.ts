@@ -1,13 +1,14 @@
 import { RouterModule, Routes } from '@angular/router';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { NgModule } from '@angular/core';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 export const routes: Routes = [
     {
         path: '', component: MainNavComponent,
         children: [
             {
-                path: '', redirectTo: '/home', pathMatch:'full'
+                path: '', redirectTo: '/home', pathMatch: 'full'
             },
             {
                 path: 'home', loadChildren: () => import('./features/home/home.module').then(m => m.HomeModule),
@@ -19,9 +20,11 @@ export const routes: Routes = [
                 path: 'passion', loadChildren: () => import('./features/passion/passion.module').then(m => m.PassionModule),
             },
         ]
-
-    }
-
+    },
+    {
+        path: '**', pathMatch: 'full',
+        component: NotFoundComponent
+    },
 
 ];
 

@@ -8,11 +8,13 @@ import { AppConstants } from './app.constants';
 import { AppRoutingModule, routes } from './app.routes';
 import { PipeModule } from './pipe/pipe.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainNavComponent
+    MainNavComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
