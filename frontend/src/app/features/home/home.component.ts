@@ -7,7 +7,7 @@ import { initFlowbite } from 'flowbite';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit {
-  isMbDrawerOpen = false;
+  isMbDrawerOpen = true;
   
   ngOnInit(): void {
     initFlowbite();
