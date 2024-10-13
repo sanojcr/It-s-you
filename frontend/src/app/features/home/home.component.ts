@@ -8,12 +8,25 @@ import { initFlowbite } from 'flowbite';
 })
 export class HomeComponent implements OnInit {
   isMbDrawerOpen = true;
-  
+
+  constructor() {
+  }
+
   ngOnInit(): void {
     initFlowbite();
   }
 
   ngAfterViewInit(): void {
     initFlowbite();
+  }
+
+  scrollToSection(comp: string) {
+    const target = document.querySelector(comp);
+    if (target) {
+      this.isMbDrawerOpen = !this.isMbDrawerOpen; 
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.error('Target section is undefined');
+    }
   }
 }
