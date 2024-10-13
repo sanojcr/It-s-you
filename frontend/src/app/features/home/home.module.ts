@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PipeModule } from '../../pipe/pipe.module';
+import { MeComponent } from './me/me.component';
 
 const routes: Routes = [
   {
@@ -12,7 +13,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent],
+  declarations: [HomeComponent, MeComponent],
   imports: [CommonModule, RouterModule.forChild(routes), PipeModule],
   exports: [RouterModule]
 })
