@@ -14,4 +14,16 @@ export class AboutComponent implements OnInit {
   ngAfterViewInit(): void {
     initFlowbite();
   }
+
+  resume(){
+    this.downloadPDF();
+  }
+
+  downloadPDF(): void {
+    const link = document.createElement('a');
+    link.href = 'assets/resumes/sanoj_resume_24.pdf';
+    link.download = 'it\'s-you-sanoj-resume';
+    link.click();
+  }
+
 }

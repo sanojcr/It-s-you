@@ -8,7 +8,7 @@
         <div class="flex gap-x-12 grid grid-cols-2 text-center sm:grid-cols-8">
             <a href="javascript:void(0)" (click)="scrollToSection('app-me')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Me</a>
             <a href="javascript:void(0)" (click)="scrollToSection('app-about')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About</a>
-            <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Work</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-work')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Work</a>
             <a href="javascript:void(0)"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">History</a>
             <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Stack</a>
@@ -39,7 +39,7 @@
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem" (click)="scrollToSection('app-about')">About</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">Work</a> 
+                    role="menuitem" (click)="scrollToSection('app-work')">Work</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">History</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
@@ -56,6 +56,7 @@
 </div>
 
 <div>
-    <app-me #mec></app-me>
-    <app-about #aboutc></app-about>
+    <app-me></app-me>
+    <app-about></app-about>
+    <app-work></app-work>
 </div>
