@@ -6,6 +6,7 @@ import { PipeModule } from '../../pipe/pipe.module';
 import { MeComponent } from './me/me.component';
 import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
+import { HistoryComponent } from './history/history.component';
 
 const routes: Routes = [
   {
@@ -15,7 +16,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, MeComponent, AboutComponent, WorkComponent],
+  declarations: [HomeComponent, MeComponent, AboutComponent, WorkComponent, HistoryComponent],
   imports: [CommonModule, RouterModule.forChild(routes), PipeModule],
   exports: [RouterModule]
 })

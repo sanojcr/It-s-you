@@ -9,7 +9,7 @@
             <a href="javascript:void(0)" (click)="scrollToSection('app-me')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Me</a>
             <a href="javascript:void(0)" (click)="scrollToSection('app-about')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About</a>
             <a href="javascript:void(0)" (click)="scrollToSection('app-work')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Work</a>
-            <a href="javascript:void(0)"
+            <a href="javascript:void(0)" (click)="scrollToSection('app-history')"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">History</a>
             <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Stack</a>
             <a href="javascript:void(0)"
@@ -40,7 +40,7 @@
                     role="menuitem" (click)="scrollToSection('app-about')">About</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem" (click)="scrollToSection('app-work')">Work</a> 
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                <a href="javascript:void(0)" (click)="scrollToSection('app-history')" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">History</a> 
                 <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">Stack</a> 
@@ -59,4 +59,5 @@
     <app-me></app-me>
     <app-about></app-about>
     <app-work></app-work>
+    <app-history></app-history>
 </div>
