@@ -10,7 +10,7 @@
                 class="absolute inset-0 bg-gray-700 bg-opacity-90 p-6 flex flex-col justify-end transition-opacity duration-300 group-hover:bg-opacity-80">
                 <p class="text-sm text-gray-200">{{repo.created_at| date: 'MMMM d, y'}}</p>
                 <h3 class="text-2xl font-semibold text-white mt-2">{{repo.name | replaceCharacters: '-' : ' ' }}</h3>
-                <p class="mt-2 text-gray-300">{{repo.description | slice: 0:120}}...</p>
+                <p class="mt-2 text-gray-300">{{repo.description | slice: 0:85}}...</p>
                 <a href="{{repo.html_url}}" class="inline-block mt-4 text-blue-400 hover:text-white transition">Read
                     more</a>
             </div>
