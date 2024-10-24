@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GithubService } from '../../../services/github.service';
 import { Repository } from '../../../models/repository';
+import { initFlowbite } from 'flowbite';
 
 @Component({
   selector: 'app-work',
@@ -27,6 +28,7 @@ export class WorkComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    initFlowbite();
     this.loadRepositoriesDetails();
   }
 
@@ -38,6 +40,10 @@ export class WorkComponent implements OnInit {
           return new Date(b.created_at).getTime() - new Date(a.created_at).getTime();
         });
     });
+  }
+
+  ngAfterViewInit(): void {
+    initFlowbite();
   }
 
 }
