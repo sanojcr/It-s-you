@@ -6,12 +6,16 @@
 <header class="z-50 hidden sm:block">
     <nav class="flex justify-center p-6 px-8" aria-label="Global">
         <div class="flex gap-x-12 grid grid-cols-2 text-center sm:grid-cols-8">
-            <a href="javascript:void(0)" (click)="scrollToSection('app-me')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Me</a>
-            <a href="javascript:void(0)" (click)="scrollToSection('app-about')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About</a>
-            <a href="javascript:void(0)" (click)="scrollToSection('app-work')" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Work</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-me')"
+                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Me</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-about')"
+                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">About</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-work')"
+                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Work</a>
             <a href="javascript:void(0)" (click)="scrollToSection('app-history')"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">History</a>
-            <a href="javascript:void(0)" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Stack</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-service')"
+                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Service</a>
             <a href="javascript:void(0)"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Awards</a>
             <a href="javascript:void(0)"
@@ -25,7 +29,8 @@
 <div class="sm:hidden flex justify-center">
     <div class="sm:hidden relative inline-block text-center">
         <button (click)="isMbDrawerOpen = !isMbDrawerOpen">
-            <svg class="w-5 h-5 dark:text-white" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <svg class="w-5 h-5 dark:text-white" fill="currentColor" viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd"
                     d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
                     clip-rule="evenodd"></path>
@@ -34,21 +39,29 @@
         <div [ngClass]="{'hidden':isMbDrawerOpen }"
             class="z-10 dark:text-white dark:bg-gray-700 origin-top-right absolute left-1/2 transform -translate-x-1/2 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none  group-hover:block">
             <div class="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                <a href="javascript:void(0)"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem" (click)="scrollToSection('app-me')">Me</a>
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem" (click)="scrollToSection('app-about')">About</a> 
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem" (click)="scrollToSection('app-work')">Work</a> 
-                <a href="javascript:void(0)" (click)="scrollToSection('app-history')" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">History</a> 
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">Stack</a> 
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">Awards</a> 
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">Contact</a> 
-                <a href="javascript:void(0)" class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                <a href="javascript:void(0)"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                    role="menuitem" (click)="scrollToSection('app-about')">About</a>
+                <a href="javascript:void(0)"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                    role="menuitem" (click)="scrollToSection('app-work')">Work</a>
+                <a href="javascript:void(0)" (click)="scrollToSection('app-history')"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                    role="menuitem">History</a>
+                <a href="javascript:void(0)" (click)="scrollToSection('app-service')"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                    role="menuitem">Service</a>
+                <a href="javascript:void(0)"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                    role="menuitem">Awards</a>
+                <a href="javascript:void(0)"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
+                    role="menuitem">Contact</a>
+                <a href="javascript:void(0)"
+                    class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">Social</a>
             </div>
         </div>
@@ -60,4 +73,15 @@
     <app-about></app-about>
     <app-work></app-work>
     <app-history></app-history>
+    <app-service></app-service>
+
+    <div class="fixed bottom-6 right-6 z-50">
+        <a href="javascript:void(0)" (click)="scrollToSection('app-me')" class="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+            </svg>
+        </a>
+    </div>
+
+    
 </div>
