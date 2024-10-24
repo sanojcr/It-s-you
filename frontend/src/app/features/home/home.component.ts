@@ -29,4 +29,13 @@ export class HomeComponent implements OnInit {
       console.error('Target section is undefined');
     }
   }
+
+  scrollToTop() {
+    const target = document.querySelector('app-me');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    } else {
+      console.error('Target section is undefined');
+    }
+  }
 }
