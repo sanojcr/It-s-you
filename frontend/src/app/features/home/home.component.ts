@@ -23,10 +23,21 @@ export class HomeComponent implements OnInit {
   scrollToSection(comp: string) {
     const target = document.querySelector(comp);
     if (target) {
-      this.isMbDrawerOpen = !this.isMbDrawerOpen; 
+      this.isMbDrawerOpen = !this.isMbDrawerOpen;
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     } else {
       console.error('Target section is undefined');
     }
+  }
+
+  scrollToTop() {
+    const target = document.querySelectorAll('.home-menu');
+    target.forEach(x => {
+      if (x) {
+        x.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        console.error('Target section is undefined');
+      }
+    })
   }
 }
