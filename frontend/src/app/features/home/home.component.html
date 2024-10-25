@@ -3,7 +3,7 @@
     <h1>{{ 'HELLO' | translate }}</h1>
     <p>{{ 'WELCOME' | translate }}</p>
 </div> -->
-<header class="z-50 hidden sm:block">
+<header class="z-50 hidden sm:block home-menu">
     <nav class="flex justify-center p-6 px-8" aria-label="Global">
         <div class="flex gap-x-12 grid grid-cols-2 text-center sm:grid-cols-8">
             <a href="javascript:void(0)" (click)="scrollToSection('app-me')"
@@ -26,7 +26,7 @@
     </nav>
 </header>
 
-<div class="sm:hidden flex justify-center">
+<div class="sm:hidden flex justify-center home-menu">
     <div class="sm:hidden relative inline-block text-center">
         <button (click)="isMbDrawerOpen = !isMbDrawerOpen">
             <svg class="w-5 h-5 dark:text-white" fill="currentColor" viewBox="0 0 20 20"
