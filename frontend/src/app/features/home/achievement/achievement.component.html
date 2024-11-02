@@ -1,0 +1,28 @@
+<div class="bg-white dark:bg-gray-800 py-12">
+  <div class="max-w-4xl mx-auto relative">
+    <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-8">Achievements Earned
+    </h2>
+    <div class="">
+      <div class="bg-white dark:bg-gray-800 p-6 max-w-sm mx-auto ">
+        <div class="text-xl text-center text-gray-800 dark:text-white font-bold"> {{ testimonials[currentIndex].type }}
+        </div>
+        <div class="mt-2">
+          <p class="text-center text-gray-600 dark:text-gray-200">{{ testimonials[currentIndex].text }}</p>
+        </div>
+        <div class="mt-4">
+          <div class="text-center text-gray-800 dark:text-white font-bold">{{ testimonials[currentIndex].author }}</div>
+          <div class="text-center text-gray-500 dark:text-gray-400">{{ testimonials[currentIndex].role }}</div>
+        </div>
+      </div>
+    </div>
+
+    <button (click)="slideLeft()"
+      class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg">
+      &larr;
+    </button>
+    <button (click)="slideRight()"
+      class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-900 text-white p-2 rounded-full shadow-lg">
+      &rarr;
+    </button>
+  </div>
+</div>
