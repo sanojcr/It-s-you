@@ -16,8 +16,8 @@
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">History</a>
             <a href="javascript:void(0)" (click)="scrollToSection('app-service')"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Service</a>
-            <a href="javascript:void(0)"
-                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Awards</a>
+            <a href="javascript:void(0)" (click)="scrollToSection('app-achievement')"
+                class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Achievement</a>
             <a href="javascript:void(0)"
                 class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">Contact</a>
             <a href="javascript:void(0)"
@@ -54,9 +54,9 @@
                 <a href="javascript:void(0)" (click)="scrollToSection('app-service')"
                     class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">Service</a>
-                <a href="javascript:void(0)"
+                <a href="javascript:void(0)" (click)="scrollToSection('app-achievement')"
                     class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
-                    role="menuitem">Awards</a>
+                    role="menuitem">Achievement</a>
                 <a href="javascript:void(0)"
                     class="font-semibold dark:text-white block px-4 py-2 text-sm text-gray-700 dark:hover:bg-gray-600 hover:bg-gray-100"
                     role="menuitem">Contact</a>
@@ -74,7 +74,7 @@
     <app-work></app-work>
     <app-history></app-history>
     <app-service></app-service>
-
+    <app-achievement></app-achievement>
     <div class="fixed bottom-6 right-6 z-50">
         <a href="javascript:void(0)" (click)="scrollToTop()" class="bg-blue-500 text-white w-12 h-12 flex items-center justify-center rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
