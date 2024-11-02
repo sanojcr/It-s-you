@@ -8,6 +8,7 @@ import { AboutComponent } from './about/about.component';
 import { WorkComponent } from './work/work.component';
 import { HistoryComponent } from './history/history.component';
 import { ServiceComponent } from './service/service.component';
+import { AchievementComponent } from './achievement/achievement.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [HomeComponent, MeComponent, AboutComponent, WorkComponent, HistoryComponent, ServiceComponent],
+  declarations: [HomeComponent, MeComponent, AboutComponent, WorkComponent, HistoryComponent, ServiceComponent,AchievementComponent],
   imports: [CommonModule, RouterModule.forChild(routes), PipeModule],
   exports: [RouterModule]
 })
