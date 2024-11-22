@@ -1,4 +1,4 @@
-name: Deploy Angular App to GitHub Pages
+name: deploy angular app to gitHub pages
 
 on:
   push:
